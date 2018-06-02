@@ -1,0 +1,9 @@
+启动activity分为两种，分别为显示调用和隐式调用
+显示调用 是通过直接指定目标activity的包名和类名，由多种api实现
+隐式调用：只有在一个intent同时匹配action，category，data时才会通过
+
+过滤规则 action：只要在过滤规则即intent中有一个action匹配到intent-filter中设置的action就匹配成功
+	category：intent中设置的所有category都匹配到intent-filter中设置的category才匹配成功。  ---intent中默认设置有android.intent.category.DEFAULT
+	data：包括uri ==》 schema://host:port/[path|prefixPath|pathPattern]和mimeType  可以设置一部分，默认schema 为content|file，  如果action中有一个data和filter中的data匹配成功就成功了。
+
+intent-filter中可以由多组，任意一组单独使用即可.

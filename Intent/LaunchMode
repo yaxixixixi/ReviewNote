@@ -1,0 +1,39 @@
+LaunchMode
+
+standard
+singleTop:栈顶复用模式，如果启动自身生命周期是onpause -> onNewIntent -> onResume
+	如果由其他地方启动执行顺序为 onPause -> onStop ->... ()...onNewIntent -> onRestart -> onStart -> onResume
+singleTask:栈内复用模式，由其他地方启动生命周期顺序为onPause -> onStop ->...  		()...onNewIntent -> onRestart -> onStart -> onResume
+	打开此模式的activity，如果栈内已经有一个该实例，根据先进后出原则，是把该栈内该实例以上的上所有的activity清理出栈
+singleInstance：使用此模式则会在一个单独的栈中创建实例，该实例单独占用一个栈，在任何地方启动的都会是同一个实例。
+
+taskAffinity：可以在manifest中为activity制定一个栈名，这个栈名必须由包名分隔符‘.’隔开字符串
+
+查看当前栈信息使用adb shell命令dumpsys activity activities
+
+
+Flag
+
+FlagActivityNewTask  
+测试：两个standard activity Mainactivity->用A表示 andSecondActivity->用B表示 
+启动A，查看栈信息
+	taskAffinity=com.example.yaxi.myapplication
+   	realActivity=com.example.yaxi.myapplication/.MainActivity
+从A启动B，查看栈信息
+	taskAffinity=com.example.yaxi.myapplication
+   	realActivity=com.example.yaxi.myapplication/.SecondActivity
+从B启动A并添加FLAGACTIVITYNEWTASK的flag，查看栈信息
+        Hist #2: ActivityRecord{cf96b8 u0 	com.example.yaxi.myapplication/.MainActivity t2282}
+          Intent { flg=0x10000000 cmp=com.example.yaxi.myapplication/.MainActivity }
+          ProcessRecord{6e139ed 16151:com.example.yaxi.myapplication/u0a244}
+        Hist #1: ActivityRecord{400ccac u0 com.example.yaxi.myapplication/.SecondActivity t2282}
+          Intent { cmp=com.example.yaxi.myapplication/.SecondActivity }
+          ProcessRecord{6e139ed 16151:com.example.yaxi.myapplication/u0a244}
+        Hist #0: ActivityRecord{10eec3c u0 com.example.yaxi.myapplication/.MainActivity t2282}
+
+
+
+
+
+
+

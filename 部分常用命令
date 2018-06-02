@@ -1,0 +1,28 @@
+重启网络：sudo /etc/init.d/networking restart
+修改hosts文件：sudo gedit /etc/hosts  格式<IP> <HOSTNAME>.<DOMAIN> <ALIAS> 
+
+查看栈名称   dumpsys activity activities
+
+linux配置adb环境变量：gedit ~/.bashrc
+export PATH=/.../:$PATH
+source ~/.bashrc
+
+切换目录为英文
+打开终端，在终端中输入命令:
+
+export LANG=en_US
+
+xdg-user-dirs-gtk-update
+
+在弹出的窗口中询问是否将目录转化为英文路径,同意并关闭.
+
+在终端中输入命令:
+
+export LANG=zh_CN
+
+关闭终端,并注销或重启.下次进入系统,系统会提示是否把转化好的目录改回中文.选择不许要并且勾上不再提示,并取消修改.主目录的中文转英文就完成了~
+
+OK，现在你可以像linux迷一样痛快的使用cd命令了，cd /home/linuxmi/Downloads……
+
+
+在设置的 「通用辅助功能」「指向和单击」 「鼠标键」可以设置小键盘代替鼠标
