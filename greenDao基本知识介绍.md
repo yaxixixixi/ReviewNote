@@ -103,9 +103,38 @@ greenDao默认（此行为可配置）多次查询返回同一个对象的引用
 #####查询sql
 查询sql支持原生sql和QueryBuilder两种方法。
 查询支持懒加载，在操作的数据结果集中节省内存和性能。
-
+<br><br/>
 **QueryBuilder**
+介绍几个API：
+- public WhereCondition and (WhereCondition cond1, WhereCondition cond2, WhereCondition ... condMore){}
+- public WhereCondition or (WhereCondition cond1, WhereCondition cond2, WhereCondition ... condMore){}
+- public WhereCondition whereOr (WhereCondition cond1, WhereCondition cond2, WhereCondition ... condMore){}
+- public WhereCondition where (WhereCondition cond1, WhereCondition cond2, WhereCondition ... condMore){}  
+  and 和 or连接的条件只能用于where和whereOr；
 
+- public <J> Join<T, J> join(Class<J> destinationEntityClass, Property destinationProperty) {}  
+使用当前QueryBuilder的主键内联目标类(destinationEntityClass)的目标属性(destinationProperty)  
+- public <J> Join<T, J> join(Property sourceProperty, Class<J> destinationEntityClass) {}  
+使用当前QueryBuilder的属性(sourceProperty)内联目标类(destinationEntityClass)的主键  
+- public <J> Join<T, J> join(Property sourceProperty, Class<J> destinationEntityClass, Property destinationProperty) {}  
+使用当前QueryBuilder的属性(sourceProperty)内联目标类(destinationEntityClass)的目标属性(destinationProperty)  
+- public <J> Join<T, J> join(Join<?, T> sourceJoin, Property sourceProperty, Class<J> destinationEntityClass,Property destinationProperty) {}   
+
+
+- public QueryBuilder<T> orderAsc(Property... properties) {}  
+- public QueryBuilder<T> orderDesc(Property... properties) {}  
+- public QueryBuilder<T> orderCustom(Property property, String customOrderForProperty) {}  
+- public QueryBuilder<T> orderRaw(String rawOrder) {}  
+
+- public QueryBuilder<T> limit(int limit) {}
+
+- public QueryBuilder<T> offset(int offset) {}
+
+- public CursorQuery buildCursor() {}
+
+- public DeleteQuery<T> buildDelete() {}
+
+- public CountQuery<T> buildCount() {                                   
 
 
 
