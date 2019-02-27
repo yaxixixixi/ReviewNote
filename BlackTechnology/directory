@@ -6,7 +6,7 @@ arcgis   地图
 推送 （消息通知/指令）
 视频通话  webRtc 
 聊天
-视频播放
+视频播放  ijkplayer  (封装过的JieCaoVideoPlayer，gsyViewoPlayer)
 第三方设备蓝牙接入   rtk/打印机/调压器/测漏仪
 nfc
 自定义相机 
@@ -22,3 +22,11 @@ nfc
 防跌倒 - 陀螺仪
 
 ndk jni
+
+google官方工具框架 jetPack组件 （https://developer.android.google.cn/jetpack/）
+网络请求  常用（基于OkHttp的RetroFit等）
+注解
+设计模式
+rxjava2  使用观察者模式的异步和基于事件的
+事件总线  eventBus或者由rxjava来包装的rxBus
+
