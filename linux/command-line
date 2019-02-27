@@ -26,3 +26,28 @@ OK，现在你可以像linux迷一样痛快的使用cd命令了，cd /home/linux
 
 
 在设置的 「通用辅助功能」「指向和单击」 「鼠标键」可以设置小键盘代替鼠标
+
+
+
+
+
+
+
+
+
+
+## Ubantu压缩命令
+1.tar.gz 它在压缩时不会占用太多CPU的，而且可以得到一个非常理想的压缩率。
+	-压缩：# tar -zcvf archive_name.tar.gz directory_to_compress
+	-解压缩：# tar -zxvf archive_name.tar.gz -C /tmp/extract_here/  不指定解压缩目录则默认为当前目录
+
+gradle 配置在了～/.bashrc
+每次打开窗口都会执行
+具体操作为：vim .bashrc
+添加 export GRADLE_PATH=/home/yaxi/.gradle/wrapper/dists/gradle-4.1-all/bzyivzo6n839fup2jbap0tjew/gradle-4.1
+export GRADLE_USER_HOME=/home/yaxi/.gradle
+export PATH=$GRADLE_PATH/bin:$PATH
+然后使用source .bashrc使之前的输入生效
+
+
+配置java环境变量
