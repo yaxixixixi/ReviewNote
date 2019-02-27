@@ -50,4 +50,11 @@ export PATH=$GRADLE_PATH/bin:$PATH
 然后使用source .bashrc使之前的输入生效
 
 
+<<<<<<< HEAD:linux/command-line
 配置java环境变量
+=======
+配置java环境变量
+
+
+
+>>>>>>> 3c91a0f51a02a7b4f5c1a994253cb6bf15da3099:部分常用命令
