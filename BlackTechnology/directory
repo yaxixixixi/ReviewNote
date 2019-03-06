@@ -22,3 +22,14 @@ nfc
 防跌倒 - 陀螺仪
 
 ndk jni
+
+
+To prevent git from detecting changes in these files you should also use this command:
+
+
+git update-index --assume-unchanged [path]
+
+git update-index --skip-worktree <path-name>
+
+[url](https://stackoverflow.com/questions/936249/how-to-stop-tracking-and-ignore-changes-to-a-file-in-git)
+
