@@ -50,13 +50,18 @@ export PATH=$GRADLE_PATH/bin:$PATH
 然后使用source .bashrc使之前的输入生效
 
 
+<<<<<<< HEAD:linux/command-line
+配置java环境变量
+=======
 配置java环境变量
 
 
 
+<<<<<<< HEAD:部分常用命令
 
 
 打开文件  nautilus file；
+
 
 
 
