@@ -97,3 +97,10 @@ ${productFlavor}${buildType}Implementation
 
 
 
+
+#### AAPT2 error: check logs for details
+just update gradle wrapper url to 4.8 and update build.gradle to 3.2.1
+
+
+
+
