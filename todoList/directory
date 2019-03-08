@@ -23,10 +23,12 @@ nfc
 
 ndk jni
 
+
 google官方工具框架 jetPack组件 （https://developer.android.google.cn/jetpack/）
 网络请求  常用（基于OkHttp的RetroFit等）
 注解
 设计模式
 rxjava2  使用观察者模式的异步和基于事件的
 事件总线  eventBus或者由rxjava来包装的rxBus
+
 
